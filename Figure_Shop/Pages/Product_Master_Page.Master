@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Product_Master_Page.master.cs" Inherits="Figure_Shop.Pages.Product_Master_Page" %>
+
+<%@ Register Src="~/User_Controls/List_Category.ascx" TagPrefix="uc1" TagName="List_Category" %>
+<%@ Register Src="~/User_Controls/Header.ascx" TagPrefix="uc1" TagName="Header" %>
+<%@ Register Src="~/User_Controls/Footer.ascx" TagPrefix="uc1" TagName="Footer" %>
+
+
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        #form1 {
+            margin: 0;
+            background-color: #fafafa;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 99;
+        }
+
+        #body {
+            width: 1200px;
+            margin: 0 auto;
+            padding: 20px 0;
+            font-family: Arial;
+        }
+
+        .search_title {
+            margin-bottom: 0;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .container{
+            display: flex;
+            column-gap: 10px;
+            margin-top: 20px;
+        }
+
+        .nav_bar {
+            width: 25%;
+        }
+
+        .list_product-container {
+            width: 75%;
+        }
+    </style>
+    <form id="form1" runat="server">
+        <div id="header">
+            <uc1:Header runat="server" ID="Header1" />
+        </div>
+        <div id="body" style="min-height: 84vh; margin-top: 81px">
+            <% if(Request.QueryString["search"] != null) { %>
+                <h2 class="search_title">Kết quả tìm kiếm cho "<%= Request.QueryString["search"].ToString() %>"</h2>
+            <% } %>
+            <div class="container">
+                <div class=".nav_bar">
+                    <uc1:List_Category runat="server" ID="List_Category" />
+                </div>
+                <div class="list_product-container">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <uc1:Footer runat="server" ID="Footer1" />
+        </div>
+    </form>
+</body>
+</html>

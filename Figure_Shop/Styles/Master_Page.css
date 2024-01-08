@@ -1,0 +1,28 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+
+.content_right {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.content_right li {
+    color: blue;
+}
+
+#body {
+}

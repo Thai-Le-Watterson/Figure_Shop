@@ -1,0 +1,68 @@
+﻿body {
+}
+
+.header_container {
+    padding: 0 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: url(../Assets/Image/38891d63301e957da6fc19b732a09caf.jpg) no-repeat center;
+    background-size: cover;
+    color: white;
+}
+
+.header_name {
+    color: red;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    cursor: pointer;
+}
+
+.header_name .logo {
+    width: 50px;
+    height: 50px;
+    background: url(../Assets/Image/60804ff8dacefb398adf1d37243d71b4.jpg) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    column-gap: 40px;
+}
+
+.header_content .nav {
+    display: flex;
+    column-gap: 20px;
+}
+
+.header_content .nav span {
+    cursor: pointer;
+}
+
+.header_content .nav span:hover {
+    opacity: 0.8;
+}
+
+.user_container {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    cursor: pointer;
+}
+
+.user_container:hover {
+    opacity: 0.8;
+}
+
+.user_container .avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: url(../Assets/Image/335850.jpg) no-repeat center;
+    background-size: cover;
+}
